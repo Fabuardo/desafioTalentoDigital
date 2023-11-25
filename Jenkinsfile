@@ -1,7 +1,7 @@
 pipeline {
     environment {
         DOCKERHUB_USERNAME = 'fabiantapiatilleria'
-        DOCKERHUB_PASSWORD = credentials('DockerHub_credentials')
+        DOCKERHUB_PASSWORD = credentials('DockerHub')
         DOCKERHUB_REPO = 'fabiantapiatilleria/latestNode'
     }
 
