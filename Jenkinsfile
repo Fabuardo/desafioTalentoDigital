@@ -28,13 +28,13 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh "docker build -t $DOCKERHUB_REPO:latest ."
+                    sh "docker build -t $DOCKERHUB_REPO:latestNode ."
                     
                     // Log in to Docker Hub
                     sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
                     
                     // Push Docker image to Docker Hub
-                    sh "docker push $DOCKERHUB_REPO:latest"
+                    sh "docker push $DOCKERHUB_REPO:latestNode"
                 }
             }
         }
